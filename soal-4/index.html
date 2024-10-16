@@ -20,7 +20,7 @@
         <label for="volume">Volume</label>
         <input type="text" name="volume" id="volume">
         
-        <input type="submit" value="Hitung" id="submit">
+        <input type="submit" value="Hitung" id="submit" >
     </form>
 
     <script>
@@ -28,6 +28,16 @@
         // berdasarkan nilai diameter yang dimasukkan.
         // Nilai volume akan muncul pada isian Volume setelah tombol
         // hitung ditekan.
+        let button = document.getElementById("submit").onclick = function(){
+            event.preventDefault();
+            const d = parseFloat(document.getElementById('diameter').value);
+            const r = d / 2;
+            const hasil = (4/3)*3.14*(r*r*r);
+            document.getElementById('volume').value = hasil.toFixed(2) + "cm";
+        }
+    
+        
+
     </script>
 </body>
 
